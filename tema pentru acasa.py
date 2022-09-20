@@ -69,6 +69,21 @@ def divizori_comuni(x,y):
     return(w)
 divizori_comuni(n,m)
 # k)
+def multipli():
+    tm=[]
+    tm2=[]
+    n=int(input("introdu n:"))
+    m=int(input("introdu m:"))
+    if n<m:
+        for mn in range(n,10**6):
+            if mn%n==0 and mn%m==0:
+                tm.append(mn)
+    if n>m:
+        for nm in range(m,10**6):
+            if nm%m==0 and nm%n==0:
+                tm2.append(nm)
+    tm2=tm[0:5]
+    return(tm2)
 # l)
 def cifre_in_2numere():
     a=str(input("introduceti nr.a:"))
@@ -81,4 +96,29 @@ def cifre_in_2numere():
 srt=cifre_in_2numere()
 print("Cifrele care sunt in cele 2 numere:")
 # m)
+def cifre_in_2numere():
+    a=str(input("introduceti nr.a:"))
+    b=str(input("introduceti nr.b:"))
+    cd=[]
+    for i in range(0,len(a)):
+        if a[i] not in b:
+            cd.append(a[1])
+            return(cd)
+srt=cifre_in_2numere()
+print("cifrele care sunt in nr.a,dar nu sunt in nr.b sunt:",srt)
 # n)
+def prietenie(m,n):
+    c=[]
+    d=[]
+    cuvant=""
+    for i in range(1,m+1):
+        if m%i==0:
+            c+=0
+    for z in range(1,n+1):
+        if n%z==0:
+            d+=0
+    if c-d:
+        cuvant="sunt prietene"
+    else:
+        cuvant="nu sunt prietene"
+    return(cuvant)
